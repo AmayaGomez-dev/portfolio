@@ -1,8 +1,6 @@
 import { Link } from 'react-scroll';
 import { useState, useEffect } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import logo from '../assets/logoWithOutName.png';
 import LanguageSelector from './LanguageSelector';
 import "../styles/header.css";
 
