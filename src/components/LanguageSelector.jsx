@@ -19,20 +19,7 @@ const FlagES = () => (
   </svg>
 );
 
-const FlagFR = () => (
-  <svg viewBox="0 0 900 600" className="flag-icon">
-    <rect width="900" height="600" fill="#ED2939"/>
-    <rect width="600" height="600" fill="#fff"/>
-    <rect width="300" height="600" fill="#002395"/>
-  </svg>
-);
 
-const FlagPT = () => (
-  <svg viewBox="0 0 600 400" className="flag-icon">
-    <rect width="600" height="400" fill="#FF0000"/>
-    <rect width="240" height="400" fill="#006600"/>
-    <circle cx="240" cy="200" r="80" fill="#FFFF00" stroke="#000" strokeWidth="2"/>
-  </svg>
 );
 
 const LanguageSelector = () => {
