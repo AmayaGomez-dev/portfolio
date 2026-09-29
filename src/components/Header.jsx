@@ -8,7 +8,6 @@ export const Header = () => {
     const { t } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
-    const [shouldHide, setShouldHide] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -23,21 +22,7 @@ export const Header = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-            const header = document.querySelector('.header');
-
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                header?.classList.add('hide-header');
-                setShouldHide(true);
-            } else {
-                header?.classList.remove('hide-header');
-                setShouldHide(false);
-            }
-
-            setLastScrollY(currentScrollY);
-        };
+    
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
