@@ -22,7 +22,19 @@ export const Header = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            const header = document.querySelector('.header');
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                header?.classList.add('hide-header');
+            } else {
+                header?.classList.remove('hide-header');
+            }
+
+            setLastScrollY(currentScrollY);
+        };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -32,9 +44,7 @@ export const Header = () => {
         <>
             {/* ------- HEADER DESKTOP + TABLET ------- */}
             <header className="header">
-               
-
-                {/* NAV DESKTOP */}
+                 {/* NAV DESKTOP */}
                 <nav className="header_nav">
                     <ul className="header_menu">
                         <li><Link to="about-me" smooth duration={500}>{t('nav.about')}</Link></li>
