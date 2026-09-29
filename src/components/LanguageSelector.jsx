@@ -20,8 +20,6 @@ const FlagES = () => (
 );
 
 
-);
-
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
