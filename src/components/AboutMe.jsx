@@ -26,7 +26,7 @@ export const AboutMe = () => {
                     <h3>{t('aboutMe.location')}</h3>
                     <p>{t('aboutMe.age')}</p>
 
-                    <img src={backgroun} alt="Profile Photo" className="hero_profile-pic" />
+                    <img src={backgroun} alt="cesar working" className="hero_profile-pic" />
                 </div>
             </section>
         </>
