@@ -28,7 +28,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://formsubmit.co/cesar.amaya.gomes@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ceamaya.0801@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
